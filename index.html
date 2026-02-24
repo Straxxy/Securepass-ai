@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecurePass AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🔐 SecurePass AI</h1>
+    <p>Smart Password Strength & Resilience Analyzer</p>
+
+    <div class="input-box">
+        <input type="password" id="password" placeholder="Enter your password">
+        <button onclick="togglePassword()">👁</button>
+        <button onclick="copyPassword()">📋</button>
+    </div>
+
+    <div class="strength-meter">
+        <div id="strength-bar"></div>
+    </div>
+
+    <h3 id="strength-text">Strength: -</h3>
+
+    <div class="details">
+        <p><strong>Entropy:</strong> <span id="entropy">0</span> bits</p>
+        <p><strong>Estimated Crack Time:</strong> <span id="crack-time">-</span></p>
+    </div>
+
+    <div class="suggestions">
+        <h4>Suggestions:</h4>
+        <ul id="suggestion-list"></ul>
+    </div>
+
+    <hr>
+
+    <button onclick="generatePassword()">🎲 Generate Strong Password</button>
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <button onclick="startAttackSimulation()">🔥 Attack Simulation Mode</button>
+
+    <div id="attack-box"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
